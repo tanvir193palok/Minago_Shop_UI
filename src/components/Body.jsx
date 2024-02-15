@@ -1,7 +1,17 @@
 import React from "react";
+import Sidebar from "../bodyComponents/Sidebar";
+import Banner from "../bodyComponents/Banner";
+import "../styles/body.css";
 
 const Body = () => {
-  return <body className="bg-pink-200 h-screen">This is body</body>;
+  return (
+    <div className="body-container">
+      <div className="body-content">
+        <Sidebar />
+        <Banner />
+      </div>
+    </div>
+  );
 };
 
 export default Body;

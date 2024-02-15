@@ -1,0 +1,110 @@
+/* Body container */
+.body-container {
+  height: calc(100vh - 3rem);
+  margin-top: 0.75rem;
+}
+
+/* Flex container for Sidebar and Banner */
+.body-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Sidebar.css */
+
+/* Container styles */
+.sidebar-container {
+  padding-right: 0.75rem;
+  width: 355px;
+  height: 500px;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.375rem;
+}
+
+/* Item styles */
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 83px;
+  width: 100%;
+  padding: 0 1rem;
+  color: #000000;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.item {
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.sidebar-item svg {
+  color: #000000;
+}
+
+/* banner.css */
+
+/* Banner container */
+.banner-container {
+  background-color: #ecfcff;
+  width: 1075px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+/* Banner content */
+.banner-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Banner text */
+.banner-text {
+  padding-top: 32px;
+}
+
+/* Banner title */
+.banner-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.highlight-title {
+  color: #3b82f6;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Highlighted text */
+.highlight {
+  color: #3b82f6;
+}
+
+/* Banner subtitle */
+.banner-subtitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 5px;
+  line-height: 80px;
+}
+
+/* Banner button */
+.banner-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+/* Banner image */
+.banner-image {
+  height: 100%;
+}

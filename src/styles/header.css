@@ -1,0 +1,164 @@
+.header-container {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-container {
+  padding-top: 0.75rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Container styles */
+.searchbox-container {
+  width: 600px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.375rem; /* 6px */
+}
+
+/* Input field styles */
+.search-input {
+  width: 380px;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+}
+
+/* Dropdown container styles */
+.dropdown-container {
+  position: relative;
+}
+
+/* Dropdown button styles */
+.dropdown-button {
+  padding: 8px;
+  width: 180px;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+}
+
+/* Dropdown icon styles */
+.dropdown-icon {
+  margin-left: 6px;
+}
+
+/* Dropdown list styles */
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 160px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem; /* 6px */
+  margin-top: 4px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+  width: 100%;
+  padding: 0.5rem 1rem; /* 8px 16px */
+  color: #4b5563;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Search button styles */
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem; /* 8px */
+  margin: 2px;
+  border: none;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 0.375rem; /* 6px */
+  cursor: pointer;
+}
+
+/* Container styles */
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Icons group styles */
+.icons-group {
+  display: flex;
+  margin-right: 50px;
+  gap: 22px;
+}
+
+/* Cart icon container styles */
+.cart-icon-container {
+  position: relative;
+}
+
+/* Cart count styles */
+.cart-count {
+  position: absolute;
+  top: -15px;
+  right: -12px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+/* User info styles */
+.user-info {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+/* Price styles */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Container styles */
+.browse-pages-container {
+  background-color: #3b82f6;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 0.375rem;
+}
+
+.pages-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-right: 100px;
+}

@@ -1,7 +1,7 @@
 /* Body container */
 .body-container {
   height: calc(100vh - 3rem);
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 /* Flex container for Sidebar and Banner */
@@ -14,7 +14,7 @@
 
 /* Container styles */
 .sidebar-container {
-  padding-right: 0.75rem;
+  margin-right: 1rem;
   width: 355px;
   height: 500px;
   border: 2px solid #e5e7eb;
@@ -49,6 +49,7 @@
   background-color: #ecfcff;
   width: 1075px;
   height: 500px;
+  border-radius: 4px;
   display: flex;
   justify-content: space-between;
   padding-left: 40px;
@@ -106,5 +107,60 @@
 
 /* Banner image */
 .banner-image {
+  height: 100%;
+}
+
+/* Preview.css */
+
+/* Grid container styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Grid item styles */
+.grid-item {
+  height: 220px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+/* PreviewItem.css */
+
+/* Container styles */
+.preview-item-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Info section styles */
+.preview-item-info {
+  padding-top: 1rem;
+}
+
+/* Sale text styles */
+.sale-text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Buy now section styles */
+.buy-now-section {
+  display: flex;
+  padding-top: 14px;
+  gap: 0.5rem;
+  color: #ff0000;
+  font-weight: 600;
+}
+
+/* Image styles */
+.preview-item-image {
+  width: 40%;
   height: 100%;
 }

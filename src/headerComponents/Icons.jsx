@@ -1,14 +1,14 @@
 import React from "react";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import ScreenRotationIcon from "@mui/icons-material/ScreenRotation";
+import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
 const Icons = () => {
   return (
     <div className="icons-container">
       <div className="icons-group">
-        <ScreenRotationIcon />
+        <FullscreenOutlinedIcon />
         <FavoriteBorderIcon />
         <div className="cart-icon-container">
           <ShoppingCartIcon />

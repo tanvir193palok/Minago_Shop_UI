@@ -3,6 +3,8 @@ import Sidebar from "../bodyComponents/Sidebar";
 import Banner from "../bodyComponents/Banner";
 import "../styles/body.css";
 import Preview from "../bodyComponents/Preview";
+import Services from "../bodyComponents/Services";
+import FeaturedItemGrid from "../bodyComponents/FeaturedItemGrid";
 
 const Body = () => {
   return (
@@ -12,6 +14,10 @@ const Body = () => {
         <Banner />
       </div>
       <Preview />
+      <div className="featured-content">
+        <Services />
+        <FeaturedItemGrid />
+      </div>
     </div>
   );
 };

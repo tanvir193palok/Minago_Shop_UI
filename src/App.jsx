@@ -4,7 +4,7 @@ import "./index.css";
 
 export default function App() {
   return (
-    <div className="container h-[1800px]">
+    <div className="container ">
       <Header />
       <Body />
     </div>

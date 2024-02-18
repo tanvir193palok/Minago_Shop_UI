@@ -1,7 +1,11 @@
+/*Header styles*/
+
 .header-container {
   width: 100%;
   height: auto;
 }
+
+/*Navbar styles*/
 
 .navbar-container {
   padding-top: 0.75rem;
@@ -18,19 +22,20 @@
   font-size: 1.5rem;
   font-weight: bold;
   font-style: italic;
+  cursor: pointer;
 }
 
-/* Container styles */
+/* Searchbox styles */
+
 .searchbox-container {
   width: 600px;
   margin-left: 100px;
   display: flex;
   align-items: center;
   border: 2px solid #e5e7eb;
-  border-radius: 0.375rem; /* 6px */
+  border-radius: 0.375rem;
 }
 
-/* Input field styles */
 .search-input {
   width: 380px;
   padding: 0.5rem;
@@ -38,12 +43,10 @@
   border: none;
 }
 
-/* Dropdown container styles */
 .dropdown-container {
   position: relative;
 }
 
-/* Dropdown button styles */
 .dropdown-button {
   padding: 8px;
   width: 180px;
@@ -56,42 +59,39 @@
   border: none;
 }
 
-/* Dropdown icon styles */
 .dropdown-icon {
   margin-left: 6px;
 }
 
-/* Dropdown list styles */
 .dropdown-list {
   position: absolute;
+  font-size: 15px;
   top: 100%;
   left: 0;
   z-index: 10;
   width: 160px;
-  background-color: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 0.375rem; /* 6px */
+  border-radius: 0.375rem;
   margin-top: 4px;
   padding: 0;
   list-style: none;
 }
 
-/* Dropdown item styles */
 .dropdown-item {
   width: 100%;
-  padding: 0.5rem 1rem; /* 8px 16px */
+  padding: 0.5rem 1rem;
   color: #4b5563;
   background-color: #ffffff;
   border: none;
+  border-bottom: 1px solid #e5e7eb;
   cursor: pointer;
 }
 
-/* Search button styles */
 .search-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem; /* 8px */
+  padding: 0.5rem;
   margin: 2px;
   border: none;
   background-color: #3b82f6;
@@ -100,26 +100,25 @@
   cursor: pointer;
 }
 
-/* Container styles */
+/* Icons styles */
+
 .icons-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-/* Icons group styles */
 .icons-group {
   display: flex;
   margin-right: 50px;
   gap: 22px;
+  color: #4b5563;
 }
 
-/* Cart icon container styles */
 .cart-icon-container {
   position: relative;
 }
 
-/* Cart count styles */
 .cart-count {
   position: absolute;
   top: -15px;
@@ -138,14 +137,19 @@
   align-items: center;
 }
 
-/* Price styles */
+.name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .price {
   font-size: 20px;
   font-weight: bold;
   color: #000000;
 }
 
-/* Container styles */
+/* Browse pages styles*/
+
 .browse-pages-container {
   background-color: #3b82f6;
   color: #ffffff;
@@ -162,4 +166,5 @@
   align-items: center;
   gap: 30px;
   padding-right: 100px;
+  cursor: pointer;
 }

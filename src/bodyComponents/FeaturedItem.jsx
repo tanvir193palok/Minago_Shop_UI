@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
+import ImageHoveredIcons from "./ImageHoveredIcons";
 
 const FeaturedItem = ({ product }) => {
+  //state for image hover to show the icons
+  const [isHovered, setIsHovered] = useState(false);
+
+  //Destructuring Product data
+  const { title, thumbnail, rating, stock, discountPercentage, price } =
+    product;
+
+  //Calculating discount price
+  const discountedPrice = (
+    price -
+    (price * Math.round(discountPercentage)) / 100
+  ).toFixed(2);
+
   if (!product) {
     return <p>Error: Product data is missing</p>;
   }
 
-  // Destructure product properties
-  const { title, thumbnail, rating, stock, discountPercentage, price } =
-    product;
-
-  // Calculate discounted price
-  const discountedPrice = price - (price * discountPercentage) / 100;
-
-  // Calculate the number of stars to display
-  const numStars = Number.isInteger(rating) ? Math.round(rating) : 0;
-
   return (
     <div className="item-grid-item">
-      <div className="image-container">
+      <div
+        className="image-container"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <p className="discount">- {Math.round(discountPercentage)} %</p>
+        <ImageHoveredIcons isHovered={isHovered} />
         <img className="image" src={thumbnail} alt={title} />
       </div>
       <div>
-        {/* Check if title exists */}
         <p className="title">{title || "Unknown Title"}</p>
         <div className="rating">
           {/* Render stars based on rating */}
-          {[...Array(numStars)].map((_, index) => (
+          {[...Array(Math.round(rating))].map((_, index) => (
             <StarOutlinedIcon
               key={index}
-              style={{ color: "yellow", fontSize: 18 }}
+              style={{ color: "yellow", fontSize: 15 }}
             />
           ))}
           <p className="rating-count">({stock})</p>

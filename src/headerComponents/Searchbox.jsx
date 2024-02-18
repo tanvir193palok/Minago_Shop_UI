@@ -3,7 +3,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Searchbox = () => {
-  const categories = ["Category 1", "Category 2", "Category 3", "Category 4"];
+  const categories = [
+    "Fashion Collection",
+    "Electronics Item",
+    "Home Applicance",
+    "Kitchen Item",
+    "Furniture",
+    "Food",
+    "Gadgets",
+    "Toys and Games",
+    "Health & beauty",
+  ];
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -14,7 +24,6 @@ const Searchbox = () => {
 
   return (
     <div className="searchbox-container">
-      {/* Input Field */}
       <input
         type="search"
         id="searchInput"
@@ -23,8 +32,6 @@ const Searchbox = () => {
         placeholder="Search for Products"
         required
       />
-
-      {/* Categories Dropdown */}
       <div className="dropdown-container">
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -62,10 +69,8 @@ const Searchbox = () => {
         )}
       </div>
 
-      {/* Search Button */}
-      <button type="submit" className="search-button">
+      <button className="search-button">
         <SearchIcon />
-        <span className="sr-only">Search</span>
       </button>
     </div>
   );

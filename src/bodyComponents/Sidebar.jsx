@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
 const Sidebar = () => {
   const categories = [
-    "Smart Phones",
-    "Laptops",
-    "Fragrances",
-    "Skincare",
-    "Groceries",
-    "Home Decoration",
+    "Fashion Collection",
+    "Electronics Item",
+    "Home Applicance",
+    "Kitchen Item",
+    "Furniture",
+    "Food",
+    "Gadgets",
+    "Toys and Games",
+    "Health & beauty",
   ];
 
   const [selected, setSelected] = useState(categories[0]);
@@ -22,9 +26,15 @@ const Sidebar = () => {
           onClick={() => setSelected(category)}
         >
           <div className="item">{category}</div>
-          <KeyboardArrowRightOutlinedIcon />
+          <KeyboardArrowRightOutlinedIcon style={{ color: "#777" }} />
         </div>
       ))}
+      <div className="sidebar-item-last">
+        <div className="item" style={{ color: "#3b82f6" }}>
+          View All Categories
+        </div>
+        <AddOutlinedIcon style={{ color: "#3b82f6" }} />
+      </div>
     </div>
   );
 };

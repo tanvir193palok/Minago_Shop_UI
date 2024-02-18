@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import FeaturedItem from "../bodyComponents/FeaturedItem";
@@ -26,34 +26,23 @@ const FeaturedItemGrid = () => {
 
   const productArray = Object.values(products);
   const productItems = productArray[0];
-  console.log(startIndex);
+
   return (
     <div className="featured-item-container">
       <div className="featured-item-header">
         <p className="featured-title">Featured Item</p>
         <div className="featured-item-navigation">
-          {startIndex === 0 ? (
-            <ArrowBackOutlinedIcon
-              style={{ color: "gray" }}
-              onClick={scrollLeft}
-            />
-          ) : (
-            <ArrowBackOutlinedIcon
-              style={{ color: "black" }}
-              onClick={scrollLeft}
-            />
-          )}
-          {startIndex === productItems.length - 4 ? (
-            <ArrowForwardOutlinedIcon
-              style={{ color: "gray" }}
-              onClick={scrollRight}
-            />
-          ) : (
-            <ArrowForwardOutlinedIcon
-              style={{ color: "black" }}
-              onClick={scrollRight}
-            />
-          )}
+          <ArrowBackOutlinedIcon
+            style={{ color: startIndex === 0 ? "#a2a1a1" : "#3b82f6" }}
+            onClick={scrollLeft}
+          />
+          <ArrowForwardOutlinedIcon
+            style={{
+              color:
+                startIndex === productItems.length - 4 ? "#a2a1a1" : "#3b82f6",
+            }}
+            onClick={scrollRight}
+          />
         </div>
       </div>
       <div className="item-grid">

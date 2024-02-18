@@ -1,4 +1,3 @@
-// PreviewItem.js
 import React from "react";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 

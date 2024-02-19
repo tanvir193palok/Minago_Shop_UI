@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { variantsContext } from "../context";
 
 const Shipping = ({ data }) => {
+  const { previewVariants } = useContext(variantsContext);
   const { icon, title, subTitle } = data;
+
+  const ref = useRef();
+  const isInView = useInView(ref, { triggerOnce: true });
   return (
-    <div className="shipping-item">
+    <motion.div
+      variants={previewVariants}
+      initial="animate"
+      animate={isInView ? "animate" : "initial"}
+      ref={ref}
+      className="shipping-item"
+    >
       <div className="icon-container">
         <img src={icon} alt="Icon" className="icon" />
       </div>
@@ -11,7 +23,7 @@ const Shipping = ({ data }) => {
         <p className="title">{title}</p>
         <p className="subtitle">{subTitle}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

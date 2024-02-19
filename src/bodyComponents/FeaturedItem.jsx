@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import ImageHoveredIcons from "./ImageHoveredIcons";
+import { motion, useInView } from "framer-motion";
+import { variantsContext } from "../context";
 
 const FeaturedItem = ({ product }) => {
+  //using text variants from varaints context
+  const { textVariants } = useContext(variantsContext);
+
   //state for image hover to show the icons
   const [isHovered, setIsHovered] = useState(false);
 
@@ -16,9 +21,8 @@ const FeaturedItem = ({ product }) => {
     (price * Math.round(discountPercentage)) / 100
   ).toFixed(2);
 
-  if (!product) {
-    return <p>Error: Product data is missing</p>;
-  }
+  const ref = useRef();
+  const isInView = useInView(ref, { triggerOnce: true });
 
   return (
     <div className="item-grid-item">
@@ -29,23 +33,40 @@ const FeaturedItem = ({ product }) => {
       >
         <p className="discount">- {Math.round(discountPercentage)} %</p>
         <ImageHoveredIcons isHovered={isHovered} />
-        <img className="image" src={thumbnail} alt={title} />
+        <motion.img
+          whileHover={{ scale: 1.1 }}
+          transition={{ transition: { duration: 1 } }}
+          className="image"
+          src={thumbnail}
+          alt={title}
+        />
       </div>
-      <div>
+      <motion.div
+        variants={textVariants}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
+        ref={ref}
+      >
         <p className="title">{title || "Unknown Title"}</p>
-        <div className="rating">
+        <motion.div
+          variants={textVariants}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          ref={ref}
+          className="rating"
+        >
           {/* Render stars based on rating */}
           {[...Array(Math.round(rating))].map((_, index) => (
             <StarOutlinedIcon
               key={index}
-              style={{ color: "yellow", fontSize: 15 }}
+              style={{ color: "#FFB000", fontSize: 15 }}
             />
           ))}
           <p className="rating-count">({stock})</p>
           <p className="availability">
             {stock ? "Stock Available" : "No Stock"}
           </p>
-        </div>
+        </motion.div>
         <div className="price">
           <p className="discounted-price">${discountedPrice}</p>
           <div className="original-price">
@@ -53,7 +74,7 @@ const FeaturedItem = ({ product }) => {
             <p className="actual-price">${price}</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
